@@ -159,7 +159,7 @@ main {
   filter: blur(3px);
 }
 
-.content1 {
+.content-1 {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -167,7 +167,7 @@ main {
   z-index: 1;
 }
 
-.content1 span {
+.content-1 span {
   display: block;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -187,7 +187,7 @@ main {
   z-index: 1;
 }
 
-.article-2 p.content2 {
+.content-2 {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
@@ -197,17 +197,18 @@ main {
   padding-right: 5%;
 }
 
-.article-2 img {
+.content-2 img {
   position: relative;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-block: 20px;
+  display: block;
+  margin: auto;
+
 }
 
 .article-1::after,
 .article-2::after {
   content: '';
-  background: rgba(0, 0, 0, 0.6); 
+  background: rgba(0, 0, 0, 0.8); 
   position: absolute;
   top: 0;
   left: 0;
@@ -215,6 +216,50 @@ main {
   height: 100%;
   z-index: -1;
 }
+
+.content-3 {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+
+  .content-2 {
+    width: 65%;
+  }
+
+  .content-2 img {
+    position: absolute;
+    float: right;
+    top: 2%;
+    left: 100%;
+    transform: translate(0%, 0%);
+  }
+
+  .content-3 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    position: relative;
+    width: 65%;
+    top: 10%;
+    float: right;
+    display: block;
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+  }
+
+  .content-3 img {
+    float: left;
+  }
+
+}
+
 
 @media screen and (min-width: 1024px) {
 button {
